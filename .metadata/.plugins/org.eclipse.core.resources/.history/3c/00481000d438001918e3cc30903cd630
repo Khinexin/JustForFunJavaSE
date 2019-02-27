@@ -1,0 +1,21 @@
+package demo;
+
+import java.util.Scanner;
+
+public class AsciiValueOfAChar {
+	
+	public static void main(String[] args) {			
+		
+//		Scanner sc = new Scanner (System.in);
+//		
+//		System.out.println("Enter a sentence!");
+//		String sentence = sc.nextLine();
+		
+		char ch = 'a';
+		int i=ch;
+		System.out.println("Ascii value of "+ch+" is : "+i);
+		
+
+	}
+
+}

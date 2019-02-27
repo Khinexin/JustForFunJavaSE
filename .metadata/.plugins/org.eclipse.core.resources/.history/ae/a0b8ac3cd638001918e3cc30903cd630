@@ -1,0 +1,59 @@
+//eg:
+// aaaabbbbbbbbbcccccccccddd  -> a,b,c,d
+
+package demo;
+
+import java.util.HashMap;
+import java.util.LinkedHashSet;
+import java.util.Map;
+import java.util.Scanner;
+import java.util.Set;
+
+public class RemoveDuplicatesFromString {
+
+	public static void main(String[] args) {
+		
+		
+		System.out.println("Enter characters to test remove duplicated char!");
+		Scanner sc = new Scanner(System.in);	
+		
+		RemoveDuplicatesFromString example = new RemoveDuplicatesFromString();
+//		example.toRemoveDuplicateChar(sc.nextLine());
+		
+		example.toCountDuplicateChar(sc.nextLine());
+
+	}
+	
+	public void toRemoveDuplicateChar(String sentence) {
+		
+		char[] splitSentence = sentence.toCharArray();
+		Set<Character> charSet = new LinkedHashSet<Character>();
+		
+		for (Character character : splitSentence) {
+			charSet.add(character);					
+		}		
+		System.out.println(charSet.toString());
+	}
+	
+	public void toCountDuplicateChar(String sentence) {
+		Map<Character, Integer> mapDup = new HashMap<Character, Integer>();
+		char[] chaArray = sentence.toCharArray();
+		
+		for (char c : chaArray) {
+			if( !mapDup.containsKey(c)) {
+				mapDup.put(c, 1);
+			} else {
+				mapDup.put(c, mapDup.get(c)+1);
+			}
+			
+			Set<Map.Entry<Character, Integer>> entrySet = mapDup.entrySet();
+			
+			for(Map.Entry<Character, Integer> entry: entrySet) {
+				if(entry.getValue()>1) {
+					System.out.printf("%s : %d %n", entry.getKey(),entry.getValue());
+				}
+			}
+		}
+	}
+
+}

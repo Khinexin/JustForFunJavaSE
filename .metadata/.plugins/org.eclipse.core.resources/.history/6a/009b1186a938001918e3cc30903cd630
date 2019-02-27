@@ -1,0 +1,29 @@
+package demo;
+
+import java.util.Scanner;
+
+public class CharacterCountInEachWord_InString {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter a line to discover each word & numberOfCharacter : ");
+		
+		Scanner sc = new Scanner(System.in);
+		String userInput = sc.nextLine();
+		
+		System.out.println();
+		
+		char charCount[]=userInput.toCharArray();
+		
+		for(int i=1;i<=charCount.length;i++) {
+			System.out.println(i+" : "+charCount);
+		}
+		
+		
+		
+		
+		
+		
+	}
+
+}

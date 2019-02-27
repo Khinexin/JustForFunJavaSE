@@ -1,0 +1,36 @@
+package demo;
+
+import java.util.Scanner;
+
+public class ToCountVowelsInAString {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter a sentence: ");
+		
+		ToCountVowelsInAString example = new ToCountVowelsInAString();
+		
+		Scanner sc = new Scanner(System.in);		
+		example.toCountVowels(sc.nextLine());
+		
+	}
+	
+	public void toCountVowels(String sentence) {
+		char[] testChar = sentence.toCharArray();
+		int numberOfVowel = 0;
+		
+		switch (testChar[i]) {
+		case 'a': numberOfVowel++;
+		case 'e': numberOfVowel++;
+		case 'i': numberOfVowel++;
+		case 'o': numberOfVowel++;
+		case 'u': numberOfVowel++;
+
+		default: System.out.println("Number of vowels "+numberOfVowel);
+			break;
+		}
+		System.out.println("no of vowels : "+ numberOfVowel);	
+	
+	}
+
+}

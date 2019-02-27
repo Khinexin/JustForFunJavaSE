@@ -1,0 +1,13 @@
+package demo1;
+
+public class StringPelindrome {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public static boolean isPalindrone(String inputString) {
+		return inputString.equals(new StringBuffer().append(inputString).reverse().toString())
+	}
+
+}

@@ -1,0 +1,31 @@
+package demo;
+
+import java.util.Scanner;
+
+public class FloydsTriangle {
+
+	public static void main(String[] args) {
+		
+		int numInit, numloop1,numloop2, answer=1;
+		
+		System.out.println("Enter a number to initialize loop:");
+		Scanner sc = new Scanner(System.in);
+		numInit = sc.nextInt();
+	
+		
+		for(numloop1=1; numloop1<=numInit ; numloop1++) {
+			
+			for(numloop2=1; numloop2<=numloop1;numloop2++) {
+				
+				System.out.print(answer+"");
+				answer++;
+				
+			}
+			
+			System.out.println(" ");
+			
+		}
+
+	}
+
+}

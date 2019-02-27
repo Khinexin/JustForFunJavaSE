@@ -1,0 +1,30 @@
+package demo1;
+
+import java.util.Scanner;
+
+public class PrimeNumberDemo {
+
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter number to check if prime number or not");
+		int num = sc.nextInt();
+		
+		if(num ==0 || num ==1) {
+			System.out.println("0 and 1 are Not Prime number");
+		}else if(num == 2 || num ==3) {
+			System.out.println("Prime number");
+		} else if ((num %2) == 0){
+			System.out.println("Prime number dividable by 2");
+		}else if((num%3)==0) {
+			System.out.println("Prime number dividable by 3");
+		}else if((num%5)==0) {
+			System.out.println("Prime number dividable by 5");
+		}else {
+			System.out.println("Not a Valid number");
+		}
+
+	}
+
+}

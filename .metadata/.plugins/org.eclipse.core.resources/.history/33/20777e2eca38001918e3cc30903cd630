@@ -1,0 +1,43 @@
+package demo;
+
+import java.util.Scanner;
+
+public class CharacterCountInEachWord_InString {
+	
+	public static void main(String[] args) {
+		
+		String charSpace = "";
+		
+		System.out.println("Enter a line to discover each word & numberOfCharacter : ");
+		
+		Scanner sc = new Scanner(System.in);
+		String userInput = sc.nextLine();
+		
+		CharacterCountInEachWord_InString charEg = new CharacterCountInEachWord_InString();
+		
+		charEg.convertSentenceAndSeperateToCountChar(userInput.toCharArray());
+		
+		System.out.println();
+		
+				
+	}
+	
+	public void convertSentenceAndSeperateToCountChar(char []charCount) {
+		
+		
+		for(int i=0;i<=charCount.length-1;i++) {
+			
+			System.out.println(i+" : "+charCount[i]);
+		
+			String s="";
+			while(i<charCount.length && charCount[i] != ' ') {
+				s=s+charCount[i];
+				i++;
+			}
+			if(s.length()>0)
+				System.out.println(s +" : "+s.length());
+		}
+	}
+	
+
+}

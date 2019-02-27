@@ -1,0 +1,17 @@
+package demo;
+
+public class FloydsTriangle {
+
+	public static void main(String[] args) {
+		
+		for(int i=1;i<=15;i++) {
+		
+			for( int num2=1;num2<=5;num2++) {
+				
+				System.out.println(i);
+			}
+		}
+
+	}
+
+}

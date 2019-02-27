@@ -1,0 +1,32 @@
+package demo1;
+
+import java.math.BigInteger;
+import java.util.Scanner;
+import java.util.stream.LongStream;
+
+public class FactiorialDemo {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a number!");
+		
+		int num = sc.nextInt();
+		
+//		System.out.println(factorialMethod(num));
+		System.out.println(" "+calc(num));
+	}
+	
+	public static long factorialMethod(int n) {
+		if(n>20) throw new IllegalArgumentException(n +" is out of range");
+//		return (1>n) ? 1: n* factioralMethod(n-1);
+		return LongStream.rangeClosed(1, n).reduce(1, (a,b)-> a*b);
+	}
+	
+	public static long calc(int n) {
+		if(n<=1)
+			return 1;
+		else return n* calc(n-1);
+	}
+
+}

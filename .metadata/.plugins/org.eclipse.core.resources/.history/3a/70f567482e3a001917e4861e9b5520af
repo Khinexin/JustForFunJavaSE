@@ -1,0 +1,31 @@
+package demo1;
+
+import java.util.Scanner;
+
+public class ReverseAString {
+	
+	public static void main(String[] args) {
+		
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a sentence to reverse it!");
+		
+		String inputString = sc.nextLine();
+		
+		System.out.println("");
+		toReturnReverseString(inputString)
+		
+	}
+	
+	public static String toReturnReverseString(String inputString) {
+		String reverse="";
+		for(int i= inputString.length()-1;i>=0;i--) {
+			reverse = reverse+inputString.charAt(i);
+		}
+		return reverse;
+	}
+	
+	
+
+}

@@ -1,0 +1,38 @@
+package demo;
+
+import java.util.Scanner;
+
+public class ToCountVowelsInAString {
+	
+	public static void main(String[] args) {
+		
+		System.out.println("Enter a sentence: ");
+		
+		Scanner sc = new Scanner(System.in);	
+		String enterString = sc.nextLine();
+		
+		char[] charArray = enterString.toCharArray();
+		int countVowels = 0;
+		
+		for (char c : charArray) {
+			switch(c) {
+			case 'a':
+			case 'e':
+			case 'i':
+			case 'o':
+			case 'u':
+				countVowels++;
+				break;
+			default:
+				System.out.println("No Vowels in your sentence!");
+				break;
+			}
+		}
+		
+		
+		
+		
+	}
+	
+
+}

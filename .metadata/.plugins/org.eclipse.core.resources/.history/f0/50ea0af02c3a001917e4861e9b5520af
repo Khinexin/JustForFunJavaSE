@@ -1,0 +1,45 @@
+package demo1;
+
+import java.util.Scanner;
+
+public class PelindromeDemo {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+//		System.out.println("Enter a string to check pelidrome or not");
+//		String str = sc.nextLine();
+//		
+//		System.out.println("Palindrone : "+isPalindrone(str));
+		
+		System.out.println("Enter a Number to check pelidrome or not");
+		Integer num = sc.nextInt();
+		
+		System.out.println("Palindrone : "+isIntegerPalindrone(num));
+		
+	}
+	
+	public static boolean isPalindrone(String inputString) {
+		return inputString.equalsIgnoreCase(new StringBuffer().append(inputString).reverse().toString());
+	}
+	
+	public static boolean isIntegerPalindrone(int inputNumber) {
+		
+		int num = inputNumber;
+		int reversenumber=0;
+		
+		
+		for(; num!=0 ; num/=10) {
+			reversenumber = reversenumber * 10 + (num%10);
+		}
+		if(num == reversenumber) {
+			return true;
+		} else {
+			return false;
+		}
+		
+	}
+	
+
+}

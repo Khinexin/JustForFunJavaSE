@@ -1,0 +1,17 @@
+package demo1;
+
+import java.math.BigInteger;
+import java.util.stream.LongStream;
+
+public class FactiorialDemo {
+	
+	public static void main(String[] args) {
+		
+	}
+	
+	public long factorialMethod(int n) {
+		if(n>20) throw new IllegalArgumentException(n +" is out of range");
+		return LongStream.rangeClosed(1, n).reduce(1, (a,b)-> a*b);
+	}
+
+}

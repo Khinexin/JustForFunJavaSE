@@ -1,0 +1,21 @@
+package demo1;
+
+import java.util.Scanner;
+
+public class StringPelindrome {
+	
+	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Enter a string to check pelidrome or not");
+		String str = sc.nextLine();
+		
+		System.out.println("Palindrone : "+isPalindrone(str));
+	}
+	
+	public static boolean isPalindrone(String inputString) {
+		return inputString.equals(new StringBuffer().append(inputString).reverse().toString());
+	}
+
+}
